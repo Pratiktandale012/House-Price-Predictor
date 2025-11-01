@@ -3,7 +3,10 @@ import pickle as pk
 import streamlit as st
 
 # Load model
-model = pk.load(open('/Users/pratik/anaconda_projects/HousePricePredictions/House_Prediction_model.pkl', 'rb'))
+# model = pk.load(open('/Users/pratik/anaconda_projects/HousePricePredictions/House_Prediction_model.pkl', 'rb'))
+with open('House_/Users/pratik/anaconda_projects/HousePricePredictions/House_Prediction_model.pkl', 'rb') as f:
+    model = pk.load(f)
+
 
 st.header('🏠 Bangalore House Price Predictor')
 
