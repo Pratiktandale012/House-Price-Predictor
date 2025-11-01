@@ -3,9 +3,7 @@ import pickle as pk
 import streamlit as st
 
 # Load model
-# model = pk.load(open('/Users/pratik/anaconda_projects/HousePricePredictions/House_Prediction_model.pkl', 'rb'))
-with open('/House_Prediction_model.pkl', 'rb') as f:
-    model = pk.load(f)
+model = pk.load(open('/Users/pratik/anaconda_projects/HousePricePredictions/House_Prediction_model.pkl', 'rb'))
 
 
 st.header('🏠 Bangalore House Price Predictor')
@@ -26,6 +24,6 @@ input_df = pd.DataFrame([[loc, sqft, bath, balc, beds]],
 
 # Predict
 if st.button("Predict Price"):
-    output = model.predict(input_df)
+    output = model.predict(input_df) 
     out_str = '💰 Price of House is ₹' + str(round(output[0] * 100000, 2))
     st.success(out_str)  
