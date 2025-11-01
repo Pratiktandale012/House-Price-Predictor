@@ -4,7 +4,7 @@ import streamlit as st
 
 # Load model
 # model = pk.load(open('/Users/pratik/anaconda_projects/HousePricePredictions/House_Prediction_model.pkl', 'rb'))
-with open('House_/Users/pratik/anaconda_projects/HousePricePredictions/House_Prediction_model.pkl', 'rb') as f:
+with open('/House_Prediction_model.pkl', 'rb') as f:
     model = pk.load(f)
 
 
